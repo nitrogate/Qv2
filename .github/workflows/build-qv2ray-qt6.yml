@@ -25,9 +25,9 @@ jobs:
     if: ${{ !contains( needs.check_commit_msg.outputs.commit_message, '!QT6') }}
     strategy:
       matrix:
-        ui_type: [QWidget, QML]
+        ui_type: [QML]
         platform: [ubuntu-20.04, windows-latest]
-        build_type: [RelWithDebInfo, Release]
+        build_type: [Release]
         qt_version: [6.0.0]
         include:
           - platform: windows-latest
